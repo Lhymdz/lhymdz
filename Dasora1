@@ -12,7 +12,7 @@ _G.themes = _G.themes or { -- themes
 }
 
 -- init
-local NAME = "LhyMoDZ Cracked to Dasora"
+local NAME = "Arthur Corno - Dasora Gay"
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Lhymdz/lhymdz/main/Dasora2.lua"))()
 local GUI = library.new(NAME)
 
