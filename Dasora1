@@ -12,7 +12,7 @@ _G.themes = _G.themes or { -- themes
 }
 
 -- init
-local NAME = "Arthur Corno - Dasora Gay"
+local NAME = "LhyMoDz Edition AFS"
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Lhymdz/lhymdz/main/Dasora2.lua"))()
 local GUI = library.new(NAME)
 
@@ -43,7 +43,7 @@ local WAIT_BEFORE_GETTING_ENEMIES = 1
 local NUM_BOSS_ATTACKERS = 24
 local HP_TO_SWAP_AT = 1e17
 local HP_THRESH_HOLD = 1e16
-local AUTO_EQUIP_TIME = 300
+local AUTO_EQUIP_TIME = 20
 local CURRENT_TRIAL = ""
 
 local statCalc = require(RS.ModuleScripts.StatCalc)
