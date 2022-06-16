@@ -1504,7 +1504,7 @@ do
                     end
                 end
 
-                task.wait(0.9)
+                task.wait(0.3)
             end
 
             autoUltSkip = nil
