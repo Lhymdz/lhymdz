@@ -98,6 +98,7 @@ local goldSwap
 local easyTrial
 local mediumTrial
 local hardTrial
+local ultimateTrial
 
 local autoDamage
 local autoCollect
