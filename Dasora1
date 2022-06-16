@@ -33,8 +33,8 @@ local staterPlayerScriptsFolder = player.PlayerScripts.StarterPlayerScriptsFolde
 local REMOTE = RS.Remote
 local BINDABLE = RS.Bindable
 
-local MAX_SUMMON = 7
-local MAX_EQUIPPED = 7
+local MAX_SUMMON = 8
+local MAX_EQUIPPED = 8
 local MAX_ROOM = 50
 local KILLING_METEOR = false
 local KILLING_GIFT = false
@@ -43,7 +43,7 @@ local WAIT_BEFORE_GETTING_ENEMIES = 1
 local NUM_BOSS_ATTACKERS = 24
 local HP_TO_SWAP_AT = 1e17
 local HP_THRESH_HOLD = 1e16
-local AUTO_EQUIP_TIME = 20
+local AUTO_EQUIP_TIME = 100
 local CURRENT_TRIAL = ""
 
 local statCalc = require(RS.ModuleScripts.StatCalc)
