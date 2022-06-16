@@ -69,7 +69,7 @@ local raidWorlds = {}
 local petsToFuse = {}
 local TRIAL_TARGET = {
     Weakest = false,
-    Strongest = false,
+    Strongest = true,
 }
 local originalEquippedPets
 local originalPetsTab = {}
@@ -98,7 +98,6 @@ local goldSwap
 local easyTrial
 local mediumTrial
 local hardTrial
-local ultimateTrial
 
 local autoDamage
 local autoCollect
@@ -1905,7 +1904,7 @@ do
                         tab = nil
 
                         local newlyEquippedPets = getEquippedPets()
-                        local areAllGold = true
+                        local areAllGold = false
 
                         for _, pet in pairs(newlyEquippedPets) do
                             if pet.Passive and pet.Passive ~= "Gold" then
