@@ -1673,7 +1673,7 @@ do
 
                             repeat
                                 if target ~= nil and target:FindFirstChild("Attackers") and table.find(enemyModels, target) then
-                                    BINDABLE.SendPet:Fire(target, true)
+                                    BINDABLE.SendPet:Fire(target, false)
                                 end
 
                                 target = enemySpawn.CurrentEnemy.Value
