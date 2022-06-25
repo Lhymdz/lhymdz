@@ -1882,7 +1882,7 @@ do
                             for _, enemy in ipairs(tab) do
                                 local shouldSkip = false
 
-                                if CURRENT_TRIAL == "Hard"
+                                if CURRENT_TRIAL == "Ultimate"
                                    and enemy.Name == "Chest"
                                    and ignoreChest
                                    and floorNumber >= chestIgnoreRoom then
