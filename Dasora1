@@ -1904,11 +1904,11 @@ do
                         tab = nil
 
                         local newlyEquippedPets = getEquippedPets()
-                        local areAllGold = true
+                        local areAllGold = false
 
                         for _, pet in pairs(newlyEquippedPets) do
                             if pet.Passive and pet.Passive ~= "Gold" then
-                                areAllGold = true
+                                areAllGold = false
                                 break
                             end
                         end
