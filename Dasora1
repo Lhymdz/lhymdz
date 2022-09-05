@@ -800,50 +800,6 @@ do
         end)
     end
 
-    --third page: Level
-    do
-        local d = GUI:addPage("Level")
-        local dsec1 = d:addSection("Summon")
-        local dSec2 = d:addSection("Fuse")
-        local dSec3 = d:addSection("Filter Passives")
-
-        dsec1:addToggle("Auto summon", nil, function(value)
-            autoSummon = value
-        end)
-
-        dsec1:addDropdown("Select egg to summon", eggData, function(value)
-            selectedEggAutoSummon = eggDisplayNameToNameLookUp[value]
-        end)
-
-        dsec1:addToggle("Auto max open", nil, function(value)
-            autoMaxOpen = value
-        end)
-
-        dsec1:addDropdown("Select egg to auto max open", eggData, function(value)
-            selectedEggMaxOpen = eggDisplayNameToNameLookUp[value]
-        end)
-
-        dSec2:addToggle("Auto fuse unlocked pets",nil,function(value)
-            autoFuse = value
-        end)
-
-        fighterFuseDropDown = dSec2:addDropdown("Select fighter to fuse", petsToFuse, function(value)
-            selectedFuse = value
-        end)
-
-        dSec2:addButton("Refresh",function()
-            selectedFuse = nil
-            petsToFuse = getPetsToFuseInto()
-            dSec2:updateDropdown(fighterFuseDropDown, "Refreshed fighters", petsToFuse)
-        end)
-
-        --get selected fuse since this library is glitchy
-        fighterFuseDropDown.Search.TextBox:GetPropertyChangedSignal("Text"):Connect(function()
-            selectedFuse = fighterFuseDropDown.Search.TextBox.Text
-        end)
-        end
-    end
-
     -- fourth page: Trial
     do
         local c = GUI:addPage("Trial")
