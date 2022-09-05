@@ -52,6 +52,8 @@ local petStats = require(RS.ModuleScripts.PetStats)
 local store = require(RS.ModuleScripts.LocalDairebStore)
 local enemyStats = require(RS.ModuleScripts.EnemyStats)
 local worldData = require(RS.ModuleScripts.WorldData)
+local passiveStats = require(RS.ModuleScripts.PassiveStats)
+local eggStats = require(RS.ModuleScripts.EggStats)
 local configValues = require(RS.ModuleScripts.ConfigValues)
 local enemyDamagedEffect = require(staterPlayerScriptsFolder.LocalPetHandler.EnemyDamagedEffect)
 
