@@ -53,8 +53,6 @@ local store = require(RS.ModuleScripts.LocalDairebStore)
 local enemyStats = require(RS.ModuleScripts.EnemyStats)
 local worldData = require(RS.ModuleScripts.WorldData)
 local configValues = require(RS.ModuleScripts.ConfigValues)
-local passiveStats = require(RS.ModuleScripts.PassiveStats)
-local eggStats = require(RS.ModuleScripts.EggStats)
 local enemyDamagedEffect = require(staterPlayerScriptsFolder.LocalPetHandler.EnemyDamagedEffect)
 
 local data = store.GetStoreProxy("GameData")
@@ -63,6 +61,7 @@ local IGNORED_WORLDS = {"Raid", "Tower", "Titan", "Christmas"}
 local IGNORED_METEOR_FARM_WORLDS = {"Tower", "Raid"}
 local TEMP_METEOR_FARM_IGNORE = {}
 local mobs = {}
+local eggData = {}
 local sentDebounce = {}
 local raidWorlds = {}
 local petsToFuse = {}
