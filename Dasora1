@@ -800,53 +800,6 @@ do
         end)
     end
 
-    --sixth page: Defense
-    do
-        local page = GUI:addPage("Defense")
-        local section1 = page:addSection("Defense")
-        local section2 = page:addSection("Other")
-        local section3 = page:addSection("Select World")
-        local lookup = {}
-
-        section1:addToggle("Auto defense", false, function(value)
-            autoDefense = value
-        end)
-
-        section1:addToggle("Auto teleport to defense mode", false, function(value)
-            teleportToDefenseMode = value
-        end)
-
-        section1:addToggle("Auto start defense",nil,function(value)
-            autoStartDefense = value
-        end)
-
-        section2:addButton("Set spawn for auto summon | farm",function()
-            defenseCharPos = character.HumanoidRootPart.CFrame
-            currWorld = player.World.Value
-            GUI:Notify("Spawn Set","Location saved.")
-        end)
-
-        section2:addToggle("Auto teleport to selected location",nil,function(value)
-            tpFromDefense = value
-        end)
-
-        for _, world in ipairs(WS.Worlds:GetChildren()) do
-            if world:FindFirstChild("TitanSummon") then
-                local displayName = worldData[world.Name] ~= nil and worldData[world.Name].DisplayName
-
-                if displayName then
-                    local s = string.format("%s (%s)", displayName, world.Name)
-                    lookup[s] = world.Name
-                    table.insert(defenseWorlds, s)
-                end
-            end
-        end
-
-        section3:addDropdown("Defense world", defenseWorlds, function(value)
-            selectedDefenseWorld = lookup[value]
-        end)
-    end
-    
     --third page: Level
     do
         local d = GUI:addPage("Level")
@@ -888,17 +841,6 @@ do
         fighterFuseDropDown.Search.TextBox:GetPropertyChangedSignal("Text"):Connect(function()
             selectedFuse = fighterFuseDropDown.Search.TextBox.Text
         end)
-
-        local tab = getPassives()
-
-        for _, info in pairs(tab) do
-            local passive = info.__key
-            local s = string.format("%s (%s)", info.DisplayName, passive)
-            passivesToKeep[passive] = false
-
-            dSec3:addToggle(s, false, function(value)
-                passivesToKeep[passive] = value
-            end)
         end
     end
 
@@ -1062,6 +1004,53 @@ do
 
             toggles[worldName] = toggle
         end
+    end
+
+    --sixth page: Defense
+    do
+        local page = GUI:addPage("Defense")
+        local section1 = page:addSection("Defense")
+        local section2 = page:addSection("Other")
+        local section3 = page:addSection("Select World")
+        local lookup = {}
+
+        section1:addToggle("Auto defense", false, function(value)
+            autoDefense = value
+        end)
+
+        section1:addToggle("Auto teleport to defense mode", false, function(value)
+            teleportToDefenseMode = value
+        end)
+
+        section1:addToggle("Auto start defense",nil,function(value)
+            autoStartDefense = value
+        end)
+
+        section2:addButton("Set spawn for auto summon | farm",function()
+            defenseCharPos = character.HumanoidRootPart.CFrame
+            currWorld = player.World.Value
+            GUI:Notify("Spawn Set","Location saved.")
+        end)
+
+        section2:addToggle("Auto teleport to selected location",nil,function(value)
+            tpFromDefense = value
+        end)
+
+        for _, world in ipairs(WS.Worlds:GetChildren()) do
+            if world:FindFirstChild("TitanSummon") then
+                local displayName = worldData[world.Name] ~= nil and worldData[world.Name].DisplayName
+
+                if displayName then
+                    local s = string.format("%s (%s)", displayName, world.Name)
+                    lookup[s] = world.Name
+                    table.insert(defenseWorlds, s)
+                end
+            end
+        end
+
+        section3:addDropdown("Defense world", defenseWorlds, function(value)
+            selectedDefenseWorld = lookup[value]
+        end)
     end
 
     --seventh page: Calc Dmg
