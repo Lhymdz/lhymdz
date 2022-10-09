@@ -460,7 +460,7 @@ function sex()
               elseif world == "Cursed Academy" then
                 getgenv().leveldrop:Clear()
                 table.clear(levels)
-                getgenv().levels = {"cursed_infinite","cursed_level_1","jjk_level_2","jjk_level_3",
+                getgenv().levels = {"jjk_infinite","jjk_level_1","jjk_level_2","jjk_level_3",
                                     "jjk_level_4","jjk_level_5","jjk_level_6",}
                 for i, v in ipairs(levels) do
                     getgenv().leveldrop:Add(v)
