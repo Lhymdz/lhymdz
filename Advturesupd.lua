@@ -1,5 +1,5 @@
 -- v1.4.9 --
---+ Added Jujutsu Kaisen by LhyMoDz
+-- + Added Jujutsu Kaisen by LhyMoDz
 
 -- v1.4.8 --
 -- + Added Magic Town
@@ -379,7 +379,7 @@ function sex()
 
         
 
-        local worlddrop = autofarmtab:Dropdown("Select World", {"Plannet Namak", "Shiganshinu District", "Snowy Town","Hidden Sand Village", "Marine's Ford","Ghoul City", "Hollow World", "Ant Kingdom", "Magic Town", "Jujutsu Kaisen"}, getgenv().world, function(world)
+        local worlddrop = autofarmtab:Dropdown("Select World", {"Plannet Namak", "Shiganshinu District", "Snowy Town","Hidden Sand Village", "Marine's Ford","Ghoul City", "Hollow World", "Ant Kingdom", "Magic Town", "Cursed Academy"}, getgenv().world, function(world)
             getgenv().world = world
             updatejson()
             if world == "Plannet Namak" then
@@ -457,13 +457,14 @@ function sex()
                     getgenv().leveldrop:Add(v)
                 end
                 
-              elseif world == "Jujutsu Kaisen" then
+              elseif world == "Cursed Academy" then
                 getgenv().leveldrop:Clear()
                 table.clear(levels)
-                getgenv().levels = {"jjk_infinite","jjk_level_1","jjk_level_2","jjk_level_3",
+                getgenv().levels = {"cursed_infinite","cursed_level_1","jjk_level_2","jjk_level_3",
                                     "jjk_level_4","jjk_level_5","jjk_level_6",}
                 for i, v in ipairs(levels) do
                     getgenv().leveldrop:Add(v)
+                end
             end
         end)
 
