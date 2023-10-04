@@ -64,11 +64,11 @@ if game.PlaceId == 13772394625 then
     end
   end)
   
-  local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Module.Lua"))()
+  local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/Lhymdz/lhymdz/main/UiModule.lua"))()
   local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
   
   Notification:Notify(
-    {Title = "BETA VERSION 0.1V", Description = "The best of all, simple and direct   /   By: Skyler"},
+    {Title = "BETA VERSION 0.1V", Description = "The best of all, simple and direct"},
     {OutlineColor = Color3.fromRGB(80, 80, 80), Time = 5, Type = "option"},
     {Image = "http://www.roblox.com/asset/?id=6023426923", ImageColor = Color3.fromRGB(255, 84, 84), Callback = function(State) print(tostring(State)) end}
   )
