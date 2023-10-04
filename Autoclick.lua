@@ -65,7 +65,7 @@ if game.PlaceId == 13772394625 then
   end)
   
   local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/Lhymdz/lhymdz/main/UiModule.lua"))()
-  local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/BocusLuke/UI/main/STX/Client.Lua"))()
+  local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Lhymdz/lhymdz/main/UiCliente.lua"))()
   
   Notification:Notify(
     {Title = "BETA VERSION 0.1V", Description = "The best of all, simple and direct"},
