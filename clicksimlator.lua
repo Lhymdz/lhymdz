@@ -8,6 +8,7 @@ if game.PlaceId == 14400545236 then
 	
 	--Valores
 	_G.AutoClick = true
+	_G.AutoClickStrong = true
 	_G.AutoRebirth = true
 	_G.BasicEgg	= true
 	_G.FarmEgg = true
@@ -16,6 +17,9 @@ if game.PlaceId == 14400545236 then
 	_G.WisdomEgg = true
 	_G.WingedEgg = true
 	_G.BuzzEgg = true
+	_G.IndustryEgg = true
+	_G.CrystalizedEgg = true
+	_G.SandEgg = true
 
 	function BasicEgg()
 	while _G.BasicEgg	== true do
@@ -89,7 +93,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 	end
 end
 
-		function BuzzEgg()
+	function BuzzEgg()
 	while _G.BuzzEgg == true do
 	local args = {
     [1] = "Buzz Egg",
@@ -100,6 +104,43 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 	wait(.00000000000000000000000000000000000000000000001)
 	end
 end
+
+	function IndustryEgg()
+	while IndustryEgg == true do
+	local args = {
+    [1] = "Industry Egg",
+    [2] = "Single"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("OpenEgg"):InvokeServer(unpack(args))
+	wait(.00000000000000000000000000000000000000000000001)
+	end
+end
+
+	function CrystalizedEgg()
+	while CrystalizedEgg == true do
+	local args = {
+    [1] = "Crystalized Egg",
+    [2] = "Single"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("OpenEgg"):InvokeServer(unpack(args))
+	wait(.00000000000000000000000000000000000000000000001)
+	end
+end
+
+	function SandEgg()
+	while SandEgg == true do
+	local args = {
+    [1] = "Sand Egg",
+    [2] = "Single"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("OpenEgg"):InvokeServer(unpack(args))
+	wait(.00000000000000000000000000000000000000000000001)
+	end
+end
+
 
 	function AutoRebirth()
     while _G.AutoRebirth == true do
@@ -115,6 +156,13 @@ end
 	function AutoClick()
     while _G.AutoClick == true do
         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ClickService"):WaitForChild("RF"):WaitForChild("Click"):InvokeServer()
+        wait(.00000000000000000000000000000000000000000000001)
+        end
+end
+
+function AutoClickStrong()
+    while _G.AutoClickStrong == true do
+		game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ClickService"):WaitForChild("RF"):WaitForChild("TogglePaidAuto"):InvokeServer()
         wait(.00000000000000000000000000000000000000000000001)
         end
 end
@@ -150,7 +198,17 @@ end
 		print(Value)
 	end
 })
-		
+	
+	Tab1:AddToggle({
+	Name = "AutoClick Fast",
+	Default = false,
+	Callback = function(Value)
+		_G.AutoClickStrong = Value
+        AutoClickStrong()
+		print(Value)
+	end
+})
+	
 	Tab1:AddToggle({
 	Name = "Auto Rebirth",
 	Default = false,
@@ -238,12 +296,46 @@ end
 	end
 	
 })
+
 	Tab3:AddToggle({
 	Name = "Buzz Egg 300B",
 	Default = false,
 	Callback = function(Value)
 		_G.BuzzEgg = Value
 		BuzzEgg()
+		print(Value)
+	end
+	
+})
+
+	Tab3:AddToggle({
+	Name = "Industry Egg 40T",
+	Default = false,
+	Callback = function(Value)
+		_G.IndustryEgg = Value
+		IndustryEgg()
+		print(Value)
+	end
+	
+})
+
+	Tab3:AddToggle({
+	Name = "Crystalized Egg 500T",
+	Default = false,
+	Callback = function(Value)
+		_G.CrystalizedEgg = Value
+		CrystalizedEgg()
+		print(Value)
+	end
+	
+})
+
+	Tab3:AddToggle({
+	Name = "SandEgg 65Qd",
+	Default = false,
+	Callback = function(Value)
+		_G.SandEgg = Value
+		SandEgg()
 		print(Value)
 	end
 	
