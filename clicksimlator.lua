@@ -4,7 +4,7 @@ if game.PlaceId == 14400545236 then
 	 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 	
 	--main
-	local Window = OrionLib:MakeWindow({Name = "Title of the library", IntroEnabled = false, HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+	local Window = OrionLib:MakeWindow({Name = "Dark Gay", IntroEnabled = false, HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 	
 	--Valores
 	_G.AutoClick = true
@@ -66,7 +66,7 @@ end
 	end
 })
 		
-		Tab1:AddToggle({
+	Tab1:AddToggle({
 	Name = "Auto Rebirth",
 	Default = false,
 	Callback = function(Value)
@@ -77,7 +77,7 @@ end
 
 })
 
-Tab2:AddToggle({
+	Tab2:AddToggle({
 	Name = "BasicEgg 500",
 	Default = false,
 	Callback = function(Value)
