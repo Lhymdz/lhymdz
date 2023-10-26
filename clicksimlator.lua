@@ -75,7 +75,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end
 
 	function WingedEgg()
-	while _G.Winged Egg	== true do
+	while _G.WingedEgg	== true do
 	local args = {
     [1] = "Winged Egg",
     [2] = "Single"
