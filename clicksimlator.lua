@@ -123,7 +123,7 @@ end
 	})
 	
 	local Tab3 = Window:MakeTab({
-	Name = "Eggs2",
+	Name = "Eggs1",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 	
@@ -206,7 +206,7 @@ end
 	
 })
 
-	Tab2:AddToggle({
+	Tab3:AddToggle({
 	Name = "Wicked Egg 10B",
 	Default = false,
 	Callback = function(Value)
