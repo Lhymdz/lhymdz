@@ -22,6 +22,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 	wait(.00000000000000000000000000000000000000000000001)
 	end
 end
+
 	function AutoRebirth()
     while _G.AutoRebirth == true do
        local args = {
@@ -48,6 +49,13 @@ end
 	
 	})
 	
+	local Tab2 = Window:MakeTab({
+	Name = "Eggs",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+	
+	})
+	
 	Tab1:AddToggle({
 	Name = "Auto Click",
 	Default = false,
@@ -67,6 +75,17 @@ end
 		print(Value)
 	end    
 
+})
+
+Tab2:AddToggle({
+	Name = "BasicEgg 500",
+	Default = false,
+	Callback = function(Value)
+		_G.BasicEgg = Value
+        BasicEgg()
+		print(Value)
+	end
+	
 })
 	
 end
