@@ -1,6 +1,8 @@
 if game.PlaceId == 14400545236 then
+
 	--load
 	 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+	
 	--main
 	local Window = OrionLib:MakeWindow({Name = "RaazorEX", IntroEnabled = false, HidePremium = false, SaveConfig = true, ConfigFolder = "RaazorEX"})
 	
@@ -13,6 +15,7 @@ if game.PlaceId == 14400545236 then
 	_G.FrostedEgg = true
 	_G.WisdomEgg = true
 	_G.WingedEgg = true
+	_G.BuzzEgg = true
 
 	function BasicEgg()
 	while _G.BasicEgg	== true do
@@ -78,6 +81,18 @@ end
 	while _G.WingedEgg	== true do
 	local args = {
     [1] = "Winged Egg",
+    [2] = "Single"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("OpenEgg"):InvokeServer(unpack(args))
+	wait(.00000000000000000000000000000000000000000000001)
+	end
+end
+
+		function BuzzEgg()
+	while _G.BuzzEgg == true do
+	local args = {
+    [1] = "Buzz Egg",
     [2] = "Single"
 }
 
@@ -219,6 +234,16 @@ end
 	Callback = function(Value)
 		_G.WickedEgg = Value
 		WickedEgg()
+		print(Value)
+	end
+	
+})
+	Tab3:AddToggle({
+	Name = "Buzz Egg 300B",
+	Default = false,
+	Callback = function(Value)
+		_G.BuzzEgg = Value
+		BuzzEgg()
 		print(Value)
 	end
 	
