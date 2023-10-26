@@ -45,15 +45,15 @@ end
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 	
-	})
-	
-	--tabs
+		--tabs
 	local Tab2 = Window:MakeTab({
 	Name = "Eggs",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 	
-	Tab1:AddToggle({
+	})
+	
+	Tab2:AddToggle({
 	Name = "BasicEgg 500",
 	Default = false,
 	Callback = function(Value)
@@ -62,8 +62,6 @@ end
 		print(Value)
 	end
 })
-	
-	})
 	
 	Tab1:AddToggle({
 	Name = "Auto Click",
