@@ -47,23 +47,6 @@ end
 	PremiumOnly = false
 	
 	})
-		--tabs
-	local Tab2 = Window:MakeTab({
-	Name = "Eggs",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
-	
-	})
-	
-	Tab2:AddToggle({
-	Name = "BasicEgg 500",
-	Default = false,
-	Callback = function(Value)
-		_G.BasicEgg = Value
-        BasicEgg()
-		print(Value)
-	end
-})
 	
 	Tab1:AddToggle({
 	Name = "Auto Click",
