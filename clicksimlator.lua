@@ -14,8 +14,6 @@ if game.PlaceId == 14400545236 then
 	_G.FantasyEgg = true
 	_G.FrostedEgg = true
 	_G.WisdomEgg = true
-	
-	--Eggss
 	_G.WingedEgg = true
 	
 
