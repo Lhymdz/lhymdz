@@ -148,6 +148,14 @@ end
 	
 	})
 	
+	local Tab3 = Window:MakeTab({
+	Name = "Eggs2",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+	
+	})
+	
+	
 	Tab1:AddToggle({
 	Name = "Auto Click",
 	Default = false,
@@ -235,7 +243,7 @@ end
 	
 })
 
-	Tab2:AddToggle({
+	Tab3:AddToggle({
 	Name = "Winged Egg 50B",
 	Default = false,
 	Callback = function(Value)
@@ -246,7 +254,7 @@ end
 	
 })
 
-	Tab2:AddToggle({
+	Tab3:AddToggle({
 	Name = "Buzz Egg 300B",
 	Default = false,
 	Callback = function(Value)
