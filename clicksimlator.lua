@@ -14,8 +14,6 @@ if game.PlaceId == 14400545236 then
 	_G.FantasyEgg = true
 	_G.FrostedEgg = true
 	_G.WisdomEgg = true
-	_G.WickedEgg = true
-	_G.WingedEgg = true
 	
 	
 	
@@ -71,30 +69,6 @@ end
 	while _G.WisdomEgg	== true do
 	local args = {
     [1] = "Wisdom Egg",
-    [2] = "Single"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("OpenEgg"):InvokeServer(unpack(args))
-	wait(.00000000000000000000000000000000000000000000001)
-	end
-end
-
-	function WickedEgg()
-	while _G.WickedEgg	== true do
-	local args = {
-    [1] = "Wicked Egg",
-    [2] = "Single"
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("OpenEgg"):InvokeServer(unpack(args))
-	wait(.00000000000000000000000000000000000000000000001)
-	end
-end
-
-	function WingedEgg()
-	while _G.Winged Egg	== true do
-	local args = {
-    [1] = "Winged Egg",
     [2] = "Single"
 }
 
