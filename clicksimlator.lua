@@ -1,4 +1,4 @@
-if game.PlaceId == 14400545236 then
+	if game.PlaceId == 14400545236 then
 
 	--load
 	 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
@@ -154,7 +154,6 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 	end
 end
 
-
 	function AutoRebirth()
     while _G.AutoRebirth == true do
        local args = {
@@ -173,7 +172,7 @@ end
         end
 end
 
-function AutoClickStrong()
+	function AutoClickStrong()
     while _G.AutoClickStrong == true do
 		game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ClickService"):WaitForChild("RF"):WaitForChild("TogglePaidAuto"):InvokeServer()
         wait(.00000000000000000000000000000000000000000000001)
@@ -197,6 +196,13 @@ end
 	
 	local Tab3 = Window:MakeTab({
 	Name = "Eggs1",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+	
+	})
+	
+	local Tab4 = Window:MakeTab({
+	Name = "Eggs2",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 	
@@ -321,7 +327,7 @@ end
 	
 })
 
-	Tab3:AddToggle({
+	Tab4:AddToggle({
 	Name = "Industry Egg 40T",
 	Default = false,
 	Callback = function(Value)
@@ -332,7 +338,7 @@ end
 	
 })
 
-	Tab3:AddToggle({
+	Tab4:AddToggle({
 	Name = "Crystalized Egg 500T",
 	Default = false,
 	Callback = function(Value)
@@ -343,7 +349,7 @@ end
 	
 })
 
-	Tab3:AddToggle({
+	Tab4:AddToggle({
 	Name = "SandEgg 65Qd",
 	Default = false,
 	Callback = function(Value)
