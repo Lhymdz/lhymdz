@@ -10,11 +10,24 @@ if game.PlaceId == 14400545236 then
 	_G.AutoClick = true
 	_G.AutoRebirth = true
 	_G.BasicEgg	= true
+	_G.FarmEgg	= true
 	
 	function BasicEgg()
 	while _G.BasicEgg	== true do
 	local args = {
     [1] = "Basic Egg",
+    [2] = "Single"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("OpenEgg"):InvokeServer(unpack(args))
+	wait(.00000000000000000000000000000000000000000000001)
+	end
+end
+
+function FarmEgg()
+	while _G.BasicEgg	== true do
+	local args = {
+    [1] = "Farm Egg",
     [2] = "Single"
 }
 
@@ -78,11 +91,22 @@ end
 })
 
 	Tab2:AddToggle({
-	Name = "BasicEgg 500",
+	Name = "Basic Egg 500",
 	Default = false,
 	Callback = function(Value)
 		_G.BasicEgg = Value
         BasicEgg()
+		print(Value)
+	end
+	
+})
+
+	Tab2:AddToggle({
+	Name = "Farm Egg 2.5K",
+	Default = false,
+	Callback = function(Value)
+		_G.FarmEgg = Value
+        FarmEgg()
 		print(Value)
 	end
 	
