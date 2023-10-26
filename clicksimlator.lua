@@ -19,7 +19,8 @@ if game.PlaceId == 14400545236 then
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("OpenEgg"):InvokeServer(unpack(args))
-
+	wait(.00000000000000000000000000000000000000000000001)
+	end
 end
 	function AutoRebirth()
     while _G.AutoRebirth == true do
@@ -45,6 +46,7 @@ end
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 	
+	})
 		--tabs
 	local Tab2 = Window:MakeTab({
 	Name = "Eggs",
