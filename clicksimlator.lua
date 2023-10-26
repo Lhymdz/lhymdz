@@ -11,12 +11,12 @@ if game.PlaceId == 14400545236 then
 	_G.AutoRebirth = true
 	_G.BasicEgg	= true
 	_G.FarmEgg	= true
-	_G.FantasyEgg	= true
-	_G.FrostedEgg	= true
-	_G.WisdomEgg	= true
-	_G.WickedEgg	= true
-	_G.WingedEgg	= true
-	_G.BuzzEgg	= true
+	_G.FantasyEgg = true
+	_G.FrostedEgg = true
+	_G.WisdomEgg = true
+	_G.WickedEgg = true
+	_G.WingedEgg = true
+	_G.BuzzEgg = true
 	
 	function BasicEgg()
 	while _G.BasicEgg	== true do
