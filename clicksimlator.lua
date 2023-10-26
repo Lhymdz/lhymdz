@@ -1,95 +1,89 @@
-if game.PlaceId == 3035114590 then
+if game.PlaceId == 14400545236 then
 
-local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+	--load
+	 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+	
+	--main
+	local Window = OrionLib:MakeWindow({Name = "Title of the library", IntroEnabled = false, HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+	
+	--Valores
+	_G.AutoClick = true
+	_G.AutoRebirth = true
+	_G.BasicEgg	= true
+	
+	function BasicEgg()
+	while _G.BasicEgg	== true do
+	local args = {
+    [1] = "Basic Egg",
+    [2] = "Single"
+}
 
-local Window = OrionLib:MakeWindow({Name = "RaazorExed", HidePremium = false, SaveConfig = true, ConfigFolder = "RaazorExed", IntroEnabled = false,})
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("OpenEgg"):InvokeServer(unpack(args))
 
---Valores
-_G.AutoClick = true
+end
+	function AutoRebirth()
+    while _G.AutoRebirth == true do
+       local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
 
-
-
---Funcoes
-
-function AutoClick()
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("RebirthService"):WaitForChild("RF"):WaitForChild("RequestRebirth"):InvokeServer(unpack(args))
+        wait(.00000000000000000000000000000000000000000000001)
+        end
+end
+	
+	function AutoClick()
     while _G.AutoClick == true do
         game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("ClickService"):WaitForChild("RF"):WaitForChild("Click"):InvokeServer()
         wait(.00000000000000000000000000000000000000000000001)
         end
 end
 
-
---Frame
-
-local Main = Window:MakeTab({
-	Name = "Open Eggs",
+	--tabs
+	local Tab1 = Window:MakeTab({
+	Name = "Principal",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
+	
+	})
+	
+	--tabs
+	local Tab2 = Window:MakeTab({
+	Name = "Eggs",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+	
+	Tab1:AddToggle({
+	Name = "BasicEgg 500",
+	Default = false,
+	Callback = function(Value)
+		_G.BasicEgg = Value
+        BasicEgg()
+		print(Value)
+	end
 })
-local Section = Main:AddSection({
-	Name = "PRINCIPAIS"
-})
-Main:AddToggle({
-	Name = "Auto-Click",
+	
+	})
+	
+	Tab1:AddToggle({
+	Name = "Auto Click",
 	Default = false,
 	Callback = function(Value)
 		_G.AutoClick = Value
         AutoClick()
-	end    
+		print(Value)
+	end
 })
+		
+		Tab1:AddToggle({
+	Name = "Auto Rebirth",
+	Default = false,
+	Callback = function(Value)
+		_G.AutoRebirth = Value
+        AutoRebirth()
+		print(Value)
+	end    
 
-elseif game.PlaceId == 3035114590 then
-
-    --FV
-
-    local plr = game.Players.LocalPlayer
-
-    --HUB
-
-    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-
-    local Window = OrionLib:MakeWindow({Name = "RaazorExed", HidePremium = false, SaveConfig = true, ConfigFolder = "RaazorExed", IntroEnabled = false,})
-
-
-
-    --Valores
-
-
-
-
-
-
-    --Funcoes
-    function Antikick()
-        plr.UserId = 1216025046
-        print("Alterado com sucesso")
-        end
-
-    function ForceTP()
-        plr.Backpack.Antbug:Destroy()
-    end
-
-
-    --Abas
-    local PlayerTab = Window:MakeTab({
-        Name = "Player",
-        Icon = "rbxassetid://4483345998",
-        PremiumOnly = false
-    })
-    local Section = PlayerTab:AddSection({
-        Name = "Jogador"
-    })
-    PlayerTab:AddButton({
-        Name = "Anti-Kick!",
-        Callback = function()
-            Antikick()
-          end  
-    })
-    PlayerTab:AddButton({
-        Name = "Force TP",
-        Callback = function()
-            ForceTP()
-          end  
-    })
-
+})
+	
 end
