@@ -25,7 +25,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 end
 
 function FarmEgg()
-	while _G.BasicEgg	== true do
+	while _G.FarmEgg	== true do
 	local args = {
     [1] = "Farm Egg",
     [2] = "Single"
@@ -106,7 +106,7 @@ end
 	Default = false,
 	Callback = function(Value)
 		_G.FarmEgg = Value
-        FarmEgg()
+		FarmEgg()
 		print(Value)
 	end
 	
