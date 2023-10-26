@@ -15,7 +15,7 @@ if game.PlaceId == 14400545236 then
 	function BasicEgg()
 	while _G.BasicEgg	== true do
 	local args = {
-    [1] = "Basic Egg",
+    [1] = "Farm Egg",
     [2] = "Single"
 }
 
@@ -24,7 +24,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
 	end
 end
 
-function FarmEgg()
+	function FarmEgg()
 	while _G.FarmEgg	== true do
 	local args = {
     [1] = "Farm Egg",
