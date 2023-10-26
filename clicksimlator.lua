@@ -12,6 +12,7 @@ if game.PlaceId == 14400545236 then
 	_G.BasicEgg	= true
 	_G.FarmEgg = true
 	_G.FantasyEgg = true
+	_G.FrostedEgg = true
 	
 	
 	function BasicEgg()
@@ -42,6 +43,18 @@ end
 	while _G.FantasyEgg	== true do
 	local args = {
     [1] = "Fantasy Egg",
+    [2] = "Single"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("EggService"):WaitForChild("RF"):WaitForChild("OpenEgg"):InvokeServer(unpack(args))
+	wait(.00000000000000000000000000000000000000000000001)
+	end
+end
+
+	function FrostedEgg()
+	while _G.FrostedEgg	== true do
+	local args = {
+    [1] = "Frosted Egg",
     [2] = "Single"
 }
 
