@@ -5,6 +5,16 @@ if game.PlaceId == 14400545236 then
 	
 	--main
 	local Window = OrionLib:MakeWindow({Name = "RaazorEX", IntroEnabled = false, HidePremium = false, SaveConfig = true, ConfigFolder = "RaazorEX"})
+	
+	--Valores
+	_G.AutoClick = true
+	_G.AutoRebirth = true
+	_G.BasicEgg	= true
+	_G.FarmEgg = true
+	_G.FantasyEgg = true
+	_G.FrostedEgg = true
+	_G.WisdomEgg = true
+	_G.WingedEgg = true
 
 	function BasicEgg()
 	while _G.BasicEgg	== true do
@@ -118,7 +128,6 @@ end
 	
 	})
 	
-	
 	Tab1:AddToggle({
 	Name = "Auto Click",
 	Default = false,
@@ -216,15 +225,5 @@ end
 	end
 	
 })
-
---Valores
-	_G.AutoClick = true
-	_G.AutoRebirth = true
-	_G.BasicEgg	= true
-	_G.FarmEgg = true
-	_G.FantasyEgg = true
-	_G.FrostedEgg = true
-	_G.WisdomEgg = true
-	_G.WingedEgg = true
 		
 end
