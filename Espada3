@@ -1,6 +1,101 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "", HidePremium = false, SaveConfig = true, ConfigFolder = "Swordburst3", ShowIcon = true})
+local Window = OrionLib:MakeWindow({Name = "", HidePremium = false,IntroEnabled = false, SaveConfig = true, ConfigFolder = "Swordburst3", ShowIcon = true})
+
+
+_G.KillPathos = true
+_G.WhideSlash = true
+
+-------------------------------------------------------------------------------------------------
+
+function KillPathos()
+    while _G.KillPathos == true do
+        local args = {
+            [1] = {
+                [1] = workspace.Mobs:FindFirstChild("Yeti")
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").Systems.Combat.PlayerAttack:FireServer(unpack(args))
+        wait(0.3)
+    end
+end
+
+function WhideSlash()
+    while _G.WhideSlash == true do
+            local args = {
+                [1] = "WideSlash"
+            }
+            
+            game:GetService("ReplicatedStorage").Systems.Skills.UseSkill:FireServer(unpack(args))
+            local args = {
+                [1] = {
+                    [1] = workspace.Mobs:FindFirstChild("Yeti")
+                },
+                [2] = "WideSlash",
+                [3] = 1
+            }
+            
+            game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
+            local args = {
+                [1] = {
+                    [1] = workspace.Mobs:FindFirstChild("Yeti")
+                },
+                [2] = "WideSlash",
+                [3] = 2
+            }
+            
+            game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
+            local args = {
+                [1] = {
+                    [1] = workspace.Mobs:FindFirstChild("Yeti")
+                },
+                [2] = "WideSlash",
+                [3] = 3
+            }
+            
+            game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
+            local args = {
+                [1] = {
+                    [1] = workspace.Mobs:FindFirstChild("Yeti")
+                },
+                [2] = "WideSlash",
+                [3] = 4
+            }
+            
+            game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
+            local args = {
+                [1] = {
+                    [1] = workspace.Mobs:FindFirstChild("Yeti")
+                },
+                [2] = "WideSlash",
+                [3] = 5
+            }
+            
+            game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
+            local args = {
+                [1] = {
+                    [1] = workspace.Mobs:FindFirstChild("Yeti")
+                },
+                [2] = "WideSlash",
+                [3] = 6
+            }
+            
+            game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
+            local args = {
+                [1] = {
+                    [1] = workspace.Mobs:FindFirstChild("Yeti")
+                },
+                [2] = "WideSlash",
+                [3] = 7
+            }
+            
+            game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
+            wait(7)
+    end
+end
+
+-------------------------------------------------------------------------------------------------
 
 local mainTab = Window:MakeTab({
 	Name = "Main",
@@ -23,6 +118,12 @@ local miscTab = Window:MakeTab({
 local teleportTab = Window:MakeTab({
 	Name = "Teleport",
 	Icon = "rbxassetid://6723742952",
+	PremiumOnly = false
+})
+
+local Tab2 = Window:MakeTab({
+	Name = "Boss Kill",
+	Icon = "rbxassetid://13313903300",
 	PremiumOnly = false
 })
 
@@ -135,6 +236,24 @@ mainTab:AddSlider({
 	Callback = function(Value)
 		dist = Value
 	end    
+})
+
+Tab2:AddToggle({
+    Name = "Hit Pathos",
+    Default = false,
+    Callback = function(Value)
+        _G.KillPathos = Value
+        KillPathos()
+    end
+})
+
+Tab2:AddToggle({
+    Name = "GreatSword Skill Pathos",
+    Default = false,
+    Callback = function(Value)
+        _G.WhideSlash = Value
+        WhideSlash()
+    end
 })
 
 mainTab:AddDropdown({
