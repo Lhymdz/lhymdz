@@ -239,7 +239,7 @@ mainTab:AddSlider({
 })
 
 Tab2:AddToggle({
-    Name = "Hit Pathos",
+    Name = "Hit Yeti",
     Default = false,
     Callback = function(Value)
         _G.KillPathos = Value
@@ -248,7 +248,7 @@ Tab2:AddToggle({
 })
 
 Tab2:AddToggle({
-    Name = "GreatSword Skill Pathos",
+    Name = "GreatSword Skill Yeti",
     Default = false,
     Callback = function(Value)
         _G.WhideSlash = Value
@@ -421,6 +421,30 @@ teleportTab:AddButton({
             end
         end
   	end    
+})
+
+teleportTab:AddButton({
+    Name = "Yeti Below Farm",
+    Callback = function()
+        OrionLib:MakeNotification({
+            Name = "Notification",
+            Content = "Hill set",
+            Image = "rbxassetid://4483345998",
+            Time = 2
+        })
+
+        local plataforma = Instance.new("Part")
+        local player = game.Players.LocalPlayer
+        local me = player.Character.HumanoidRootPart
+        local playerPosition = me.Position
+        plataforma.Size = Vector3.new(5, 1, 5)
+        local platformPosition = Vector3.new(-489.9864196777344, 50.676002502441406, -2110.816162109375)
+        plataforma.Position = platformPosition
+        plataforma.BrickColor = BrickColor.new("White")
+        plataforma.Anchored = true
+        plataforma.Parent = game.Workspace
+        me.CFrame = CFrame.new(platformPosition + Vector3.new(0, 5, 0))
+    end
 })
 
 miscTab:AddButton({
