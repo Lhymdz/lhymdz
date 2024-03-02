@@ -28,7 +28,7 @@ function KillPathos()
     while _G.KillPathos == true do
         local args = {
             [1] = {
-                [1] = workspace.Mobs:FindFirstChild("Pathos The Fire Lord")
+                [1] = workspace.Mobs:FindFirstChild("Yeti")
             }
         }
         
@@ -46,7 +46,7 @@ function WhideSlash()
             game:GetService("ReplicatedStorage").Systems.Skills.UseSkill:FireServer(unpack(args))
             local args = {
                 [1] = {
-                    [1] = workspace.Mobs:FindFirstChild("Pathos The Fire Lord")
+                    [1] = workspace.Mobs:FindFirstChild("Yeti")
                 },
                 [2] = "WideSlash",
                 [3] = 1
@@ -55,7 +55,7 @@ function WhideSlash()
             game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
             local args = {
                 [1] = {
-                    [1] = workspace.Mobs:FindFirstChild("Pathos The Fire Lord")
+                    [1] = workspace.Mobs:FindFirstChild("Yeti")
                 },
                 [2] = "WideSlash",
                 [3] = 2
@@ -64,7 +64,7 @@ function WhideSlash()
             game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
             local args = {
                 [1] = {
-                    [1] = workspace.Mobs:FindFirstChild("Pathos The Fire Lord")
+                    [1] = workspace.Mobs:FindFirstChild("Yeti")
                 },
                 [2] = "WideSlash",
                 [3] = 3
@@ -73,7 +73,7 @@ function WhideSlash()
             game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
             local args = {
                 [1] = {
-                    [1] = workspace.Mobs:FindFirstChild("Pathos The Fire Lord")
+                    [1] = workspace.Mobs:FindFirstChild("Yeti")
                 },
                 [2] = "WideSlash",
                 [3] = 4
@@ -82,7 +82,7 @@ function WhideSlash()
             game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
             local args = {
                 [1] = {
-                    [1] = workspace.Mobs:FindFirstChild("Pathos The Fire Lord")
+                    [1] = workspace.Mobs:FindFirstChild("Yeti")
                 },
                 [2] = "WideSlash",
                 [3] = 5
@@ -91,7 +91,7 @@ function WhideSlash()
             game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
             local args = {
                 [1] = {
-                    [1] = workspace.Mobs:FindFirstChild("Pathos The Fire Lord")
+                    [1] = workspace.Mobs:FindFirstChild("Yeti")
                 },
                 [2] = "WideSlash",
                 [3] = 6
@@ -100,7 +100,7 @@ function WhideSlash()
             game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
             local args = {
                 [1] = {
-                    [1] = workspace.Mobs:FindFirstChild("Pathos The Fire Lord")
+                    [1] = workspace.Mobs:FindFirstChild("Yeti")
                 },
                 [2] = "WideSlash",
                 [3] = 7
@@ -523,7 +523,7 @@ local Tab4 = Window:MakeTab({
 --------------------------------------------------------------------------------------------------
 
 Tab2:AddToggle({
-    Name = "Hit Pathos",
+    Name = "Hit Yeti",
     Default = false,
     Callback = function(Value)
         _G.KillPathos = Value
@@ -532,7 +532,7 @@ Tab2:AddToggle({
 })
 
 Tab2:AddToggle({
-    Name = "GreatSword Skill Pathos",
+    Name = "GreatSword Skill Yeti",
     Default = false,
     Callback = function(Value)
         _G.WhideSlash = Value
@@ -653,4 +653,4 @@ Tab4:AddButton({
             vu:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
         end)
     end
-}
+})
