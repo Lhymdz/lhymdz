@@ -91,7 +91,7 @@ function WhideSlash()
             }
             
             game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
-            wait(7)
+            wait(6)
     end
 end
 
