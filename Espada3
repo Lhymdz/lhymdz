@@ -229,7 +229,7 @@ mainTab:AddSlider({
 	Name = "Auto Farm Distance",
 	Min = 1,
 	Max = 50,
-	Default = 15,
+	Default = 23,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
 	ValueName = "distance",
