@@ -12,7 +12,7 @@ function KillPathos()
     while _G.KillPathos == true do
         local args = {
             [1] = {
-                [1] = workspace.Mobs:FindFirstChild("Yeti")
+                [1] = workspace.Mobs:FindFirstChild("Elize The Siren")
             }
         }
         
@@ -30,7 +30,7 @@ function WhideSlash()
             game:GetService("ReplicatedStorage").Systems.Skills.UseSkill:FireServer(unpack(args))
             local args = {
                 [1] = {
-                    [1] = workspace.Mobs:FindFirstChild("Yeti")
+                    [1] = workspace.Mobs:FindFirstChild("Elize The Siren")
                 },
                 [2] = "WideSlash",
                 [3] = 1
@@ -39,7 +39,7 @@ function WhideSlash()
             game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
             local args = {
                 [1] = {
-                    [1] = workspace.Mobs:FindFirstChild("Yeti")
+                    [1] = workspace.Mobs:FindFirstChild("Elize The Siren")
                 },
                 [2] = "WideSlash",
                 [3] = 2
@@ -48,7 +48,7 @@ function WhideSlash()
             game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
             local args = {
                 [1] = {
-                    [1] = workspace.Mobs:FindFirstChild("Yeti")
+                    [1] = workspace.Mobs:FindFirstChild("Elize The Siren")
                 },
                 [2] = "WideSlash",
                 [3] = 3
@@ -57,7 +57,7 @@ function WhideSlash()
             game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
             local args = {
                 [1] = {
-                    [1] = workspace.Mobs:FindFirstChild("Yeti")
+                    [1] = workspace.Mobs:FindFirstChild("Elize The Siren")
                 },
                 [2] = "WideSlash",
                 [3] = 4
@@ -66,7 +66,7 @@ function WhideSlash()
             game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
             local args = {
                 [1] = {
-                    [1] = workspace.Mobs:FindFirstChild("Yeti")
+                    [1] = workspace.Mobs:FindFirstChild("Elize The Siren")
                 },
                 [2] = "WideSlash",
                 [3] = 5
@@ -75,7 +75,7 @@ function WhideSlash()
             game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
             local args = {
                 [1] = {
-                    [1] = workspace.Mobs:FindFirstChild("Yeti")
+                    [1] = workspace.Mobs:FindFirstChild("Elize The Siren")
                 },
                 [2] = "WideSlash",
                 [3] = 6
@@ -84,14 +84,14 @@ function WhideSlash()
             game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
             local args = {
                 [1] = {
-                    [1] = workspace.Mobs:FindFirstChild("Yeti")
+                    [1] = workspace.Mobs:FindFirstChild("Elize The Siren")
                 },
                 [2] = "WideSlash",
                 [3] = 7
             }
             
             game:GetService("ReplicatedStorage").Systems.Combat.PlayerSkillAttack:FireServer(unpack(args))
-            wait(6)
+            wait(6.5)
     end
 end
 
@@ -239,7 +239,7 @@ mainTab:AddSlider({
 })
 
 Tab2:AddToggle({
-    Name = "Hit Yeti",
+    Name = "Hit Elize The Siren",
     Default = false,
     Callback = function(Value)
         _G.KillPathos = Value
@@ -248,7 +248,7 @@ Tab2:AddToggle({
 })
 
 Tab2:AddToggle({
-    Name = "GreatSword Skill Yeti",
+    Name = "GreatSword Skill Elize The Siren",
     Default = false,
     Callback = function(Value)
         _G.WhideSlash = Value
@@ -424,7 +424,7 @@ teleportTab:AddButton({
 })
 
 teleportTab:AddButton({
-    Name = "Yeti Below Farm",
+    Name = "Elize The Siren Below Farm",
     Callback = function()
         OrionLib:MakeNotification({
             Name = "Notification",
@@ -438,7 +438,7 @@ teleportTab:AddButton({
         local me = player.Character.HumanoidRootPart
         local playerPosition = me.Position
         plataforma.Size = Vector3.new(5, 1, 5)
-        local platformPosition = Vector3.new(-489.9864196777344, 50.676002502441406, -2110.816162109375)
+        local platformPosition = Vector3.new(-23371.974609375, 2888.633544921875, -1120.5367431640625)
         plataforma.Position = platformPosition
         plataforma.BrickColor = BrickColor.new("White")
         plataforma.Anchored = true
