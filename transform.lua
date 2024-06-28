@@ -1,25 +1,26 @@
 if game.PlaceId == 17682006827 then
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 local Window = OrionLib:MakeWindow({Name = "", HidePremium = false,IntroEnabled = false, SaveConfig = true, ConfigFolder = "Swordburst3", ShowIcon = true})
 
 
-_G.Autoclick = true
+_G.Click = true
 _G.Rebirth = true
 _G.Egg1 = true
 
 
-function Rebirth()
-    while _G.Rebirth == true do
-        game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer()
-        wait(5)
+function Click()
+    while _G.Click == true do
+        game:GetService("ReplicatedStorage").Click:FireServer()
+        wait(0.1)
     end
 end
 
-function Autoclick()
-    while _G.Autoclick == true do
-        game:GetService("ReplicatedStorage").Click:FireServer()
-        wait(0.1)
+function aRebirth()
+    while _G.aRebirth == true do
+        game:GetService("ReplicatedStorage").RemoteEvents.Rebirth:FireServer()
+        wait(5)
     end
 end
 
@@ -82,8 +83,8 @@ end
             Name = "AutoClick",
             Default = false,
             Callback = function(Value)
-                _G.AutoClick = Value
-                AutoClick()
+                _G.Click = Value
+                Click()
             end
         })
 
@@ -92,12 +93,12 @@ end
             Name = "Auto Rebirth",
             Default = false,
             Callback = function(Value)
-                _G.Rebirth = Value
-                Rebirth()
+                _G.aRebirth = Value
+                aRebirth()
             end
         })
 
-        Tab4:AddButton({
+        Tab1:AddButton({
             Name = "Teleport Shiny Machine",
             Callback = function()
                 OrionLib:MakeNotification({
@@ -206,4 +207,5 @@ end
             end)
         end
     })
+
 end
