@@ -166,6 +166,25 @@ local targetPosition = Vector3.new(-5410.353515625, 157.34368896484375, -5461.80
             teleportToCFrame(targetCFrame)
         end
     })
+
+    Tabs.Mounts:AddButton({
+        Title = "Ilha 6",
+        Callback = function()
+            local targetPosition = Vector3.new(-6057.62353515625, 231.60165405273438, 5615.42041015625)
+
+            local function teleportToCFrame(cframe)
+                local player = game.Players.LocalPlayer
+                local character = player.Character or player.CharacterAdded:Wait()
+
+                character:SetPrimaryPartCFrame(cframe)
+            end
+
+            local targetCFrame = CFrame.new(targetPosition)
+
+            teleportToCFrame(targetCFrame)
+        end
+    })
+    
 ----------------------------------------------------------------------------------------------------------
     Tabs.Speed:AddButton({
         Title = "Speed 500",
