@@ -665,7 +665,7 @@ do
     ---------------------------------------------------------------------------------------------------------
 
     local Toggle = Tabs.Main:AddToggle("ToggleSequence", {
-        Title = "Multi spots22",
+        Title = "Multi spots222",
         Default = false
     })
     
@@ -709,13 +709,13 @@ do
                     local speed = 1300
                     
                     tweenToCFrame(part, cframe1, speed)
-                    wait(1.7)
+                    wait(1.8)
                     
                     tweenToCFrame(part, cframe2, speed)
-                    wait(1.7)
+                    wait(1.8)
                     
                     tweenToCFrame(part, cframe3, speed)
-                    wait(2)
+                    wait(2.1)
                     
                     --tweenToCFrame(part, cframe4, speed)
                     --wait(2)
